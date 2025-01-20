@@ -1,9 +1,16 @@
-[![project chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://nixos.zulipchat.com/#narrow/stream/413949-haskell-flake)
-[![Harmeless Code of Conduct](https://img.shields.io/badge/harmless-8A2BE2)](https://srid.ca/coc "This project follows the 'Harmlessness Code of Conduct'")
+# haskell-flake (forked)
 
-# haskell-flake - Manage Haskell projects conveniently with Nix
+Manage Haskell projects conveniently with Nix
 
 <img src="./doc/haskell-flake.webp" width=100 />
+
+## Ethics of this fork
+
+Before you start, please read [CONDUCT.md](./CONDUCT.md), which explains the
+motivations for this fork and cautions about the externally linked documentation
+for this project, specifically on https://srid.ca.
+
+## Project goals
 
 There are [several ways](https://nixos.asia/en/haskell) to manage Haskell packages using [Nix](https://nixos.asia/en/nix) with varying degrees of integration.  `haskell-flake` makes Haskell development, packaging and deployment with Nix flakes a lot [simpler](https://community.flake.parts/haskell-flake/start#under-the-hood) than other existing approaches.  This project is set up as a modern [`flake-parts`](https://flake.parts/) module to integrate easily into other Nix projects and shell development environments in a lightweight and modular way.
 
@@ -78,6 +85,9 @@ this [Haskell multi-package project Nix example](https://github.com/srid/haskell
 
 https://community.flake.parts/haskell-flake
 
-## Discussion
+## Release
 
-[Zulip](https://nixos.zulipchat.com/#narrow/stream/413949-haskell-flake) is the primary venue for discussion; we also have [Github Discussions](https://github.com/shajra/haskell-flake/discussions) enabled.
+Be aware that for now the `main` branch of this fork will rebase against
+upstream development. Though an inconvenience for collaboration, this makes it
+easier to maintain this work. End user consumption through flakes should be
+unaffected.
