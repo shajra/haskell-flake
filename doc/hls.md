@@ -4,7 +4,7 @@ order: -8
 
 # IDE configuration (HLS)
 
-By default, #[[devshell]] of haskell-flake projects includes [haskell-language-server](https://github.com/haskell/haskell-language-server) and [a few other tools by default](https://github.com/srid/haskell-flake/blob/988a78590c158c5fa0b4893de793c9c783b9d7e9/nix/modules/project/defaults.nix#L23-L29).
+By default, #[[devshell]] of haskell-flake projects includes [haskell-language-server](https://github.com/haskell/haskell-language-server) and [a few other tools by default](https://github.com/shajra/haskell-flake/blob/988a78590c158c5fa0b4893de793c9c783b9d7e9/nix/modules/project/defaults.nix#L23-L29).
 {#disable}
 ## Disabling `haskell-language-server`
 
@@ -43,4 +43,4 @@ Alternatively, you can set it to `null` at a project-level:
 ## Disabling HLS plugins
 
 >[!warning] TODO
-> See here for current status: <https://github.com/srid/haskell-flake/issues/245>
+> See here for current status: <https://github.com/shajra/haskell-flake/issues/245>

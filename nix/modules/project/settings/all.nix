@@ -234,7 +234,7 @@ in
         useful to separate out the binary with a reduced closure size.
 
         WARNING: This can lead to cyclic references; see
-        https://github.com/srid/haskell-flake/issues/167
+        https://github.com/shajra/haskell-flake/issues/167
       '';
       impl = enable:
         let

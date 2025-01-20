@@ -1,6 +1,6 @@
 # Examples
 
-- [srid/haskell-template](https://github.com/srid/haskell-template/blob/master/flake.nix)
+- [shajra/haskell-template](https://github.com/shajra/haskell-template/blob/master/flake.nix)
 - [fpindia/fpindia-site](https://github.com/fpindia/fpindia-site/blob/master/flake.nix)
 - [srid/haskell-multi-nix](https://github.com/srid/haskell-multi-nix/blob/master/flake.nix) - multiple [[local|local packages]]
 - [srid/emanote](https://github.com/srid/emanote/blob/master/flake.nix)

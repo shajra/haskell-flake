@@ -9,4 +9,4 @@
 ## Limitations
 
 - Glob patterns in `cabal.project` are not supported yet. Feel free to open a PR improving the parser to support them.
-- https://github.com/srid/haskell-flake/issues/113
+- https://github.com/shajra/haskell-flake/issues/113

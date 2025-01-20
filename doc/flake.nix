@@ -13,7 +13,7 @@
     flake-parts-website.inputs.haskell-flake.follows = "haskell-flake";
     flake-parts-website.inputs.flake-parts.follows = "flake-parts";
 
-    haskell-flake.url = "github:srid/haskell-flake";
+    haskell-flake.url = "github:shajra/haskell-flake";
   };
 
   outputs = inputs@{ self, flake-parts, nixpkgs, ... }:

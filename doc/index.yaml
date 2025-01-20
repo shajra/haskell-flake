@@ -9,7 +9,7 @@ page:
 template:
   # You can add your own variables here, like editBaseUrl.
   # See after-note.tpl to see where editBaseUrl gets used.
-  editBaseUrl: https://github.com/srid/haskell-flake/edit/master/doc
+  editBaseUrl: https://github.com/shajra/haskell-flake/edit/master/doc
   sidebar:
     collapsed: false
   urlStrategy: pretty

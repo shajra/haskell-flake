@@ -3,7 +3,7 @@
 
 haskell-flake provides sensible defaults for various options. See [defaults.nix].
 
-[defaults.nix]: https://github.com/srid/haskell-flake/blob/master/nix/modules/project/defaults.nix
+[defaults.nix]: https://github.com/shajra/haskell-flake/blob/master/nix/modules/project/defaults.nix
 
 {#override}
 ## Overriding defaults

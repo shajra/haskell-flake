@@ -23,7 +23,7 @@ The minimal changes to your `flake.nix` to introduce the `haskell-flake` and [`f
   inputs = {
     ...
     flake-parts.url = "github:hercules-ci/flake-parts";
-    haskell-flake.url = "github:srid/haskell-flake";
+    haskell-flake.url = "github:shajra/haskell-flake";
   };
 
   outputs = inputs:
@@ -71,7 +71,7 @@ In this example an imaginary `my-haskell-package.cabal` project is used.
 
 To see in more detail how to use `haskell-flake` in a realistic Haskell project
 with several other development tools, take a look at
-the corresponding [Haskell single-package project Nix template](https://github.com/srid/haskell-template) and
+the corresponding [Haskell single-package project Nix template](https://github.com/shajra/haskell-template) and
 this [Haskell multi-package project Nix example](https://github.com/srid/haskell-multi-nix).
 
 ## Documentation
@@ -80,4 +80,4 @@ https://community.flake.parts/haskell-flake
 
 ## Discussion
 
-[Zulip](https://nixos.zulipchat.com/#narrow/stream/413949-haskell-flake) is the primary venue for discussion; we also have [Github Discussions](https://github.com/srid/haskell-flake/discussions) enabled.
+[Zulip](https://nixos.zulipchat.com/#narrow/stream/413949-haskell-flake) is the primary venue for discussion; we also have [Github Discussions](https://github.com/shajra/haskell-flake/discussions) enabled.

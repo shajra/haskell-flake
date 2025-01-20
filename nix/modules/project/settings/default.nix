@@ -76,8 +76,8 @@ in
             }).config;
             cfg = traceSettings name cfg';
             # HACK: buildFromSdist must apply *last*
-            # cf. https://github.com/srid/haskell-flake/pull/252
-            # In future, we can refactor this as part of https://github.com/srid/haskell-flake/issues/285
+            # cf. https://github.com/shajra/haskell-flake/pull/252
+            # In future, we can refactor this as part of https://github.com/shajra/haskell-flake/issues/285
             # NOTE: removeReferencesTo must apply *before* buildFromSdist, because the
             # later appears it fuck up the former otherwise.
             impl = builtins.removeAttrs cfg.impl [ "buildFromSdist" "removeReferencesTo" ];
