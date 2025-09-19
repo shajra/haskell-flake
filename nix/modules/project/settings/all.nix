@@ -203,6 +203,8 @@ in
       type = types.lazyAttrsOf types.bool;
       description = ''
         Cabal flags to enable or disable explicitly.
+
+        NOTE: You may wish to use `packages.*.cabalFlags` instead, as those are passed directly to `cabal2nix` (see #418).
       '';
       impl = flags: drv:
         let
@@ -325,6 +327,16 @@ in
           ]) else null;
     };
 
+    generateOptparseApplicativeCompletions = {
+      type = types.listOf types.str;
+      description = ''
+        Generate and install shell completion files for executables.
+        The executables need to be using `optparse-applicative` for this to work.
+        Note that this feature is automatically disabled when cross-compiling, since it requires executing the binaries in question.
+      '';
+      impl = self.generateOptparseApplicativeCompletions;
+    };
+
     removeReferencesTo = {
       type = types.listOf types.package;
       description = ''
@@ -373,11 +385,60 @@ in
         else drv;
     };
 
+    installIntermediates = {
+      type = types.bool;
+      description = ''
+        Whether to install intermediate build artifacts (for incremental builds).
+      '';
+      impl = enable: overrideCabal (drv: {
+        doInstallIntermediates = enable;
+      });
+    };
+
+    separateIntermediatesOutput = {
+      type = types.bool;
+      description = ''
+        Whether to separate intermediate build artifacts into a distinct output.
+        Only applies if `installIntermediates` is enabled.
+      '';
+      impl = enable: overrideCabal (drv: {
+        enableSeparateIntermediatesOutput = enable;
+      });
+    };
+
+    previousIntermediates = {
+      type = types.path;
+      description = ''
+        Previous build intermediates of the same package.
+      '';
+      impl = intermediates: overrideCabal (drv: {
+        previousIntermediates = intermediates;
+      });
+    };
+
+    # Setting raw attributes on the derivation
+    drvAttrs = {
+      type = types.lazyAttrsOf types.raw;
+      description = ''
+        Raw attributes to set on the Haskell package derivation.
+
+        This allows setting arbitrary attributes like environment variables
+        or other derivation attributes without the complexity of using custom.
+
+        Example:
+
+            drvAttrs = {
+              GIT_BIN = lib.getExe' pkgs.git "git";
+            };
+      '';
+      impl = attrs: drv: drv.overrideAttrs (oldAttrs: oldAttrs // attrs);
+    };
+
     # When none of the above settings is suitable:
     custom = {
       type = types.functionTo types.package;
       description = ''
-        A custom funtion to apply on the Haskell package.
+        A custom function to apply on the Haskell package.
 
         Use this only if none of the existing settings are suitable.
 

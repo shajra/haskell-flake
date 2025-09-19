@@ -1,5 +1,3 @@
-# haskell-flake (forked)
-
 Manage Haskell projects conveniently with Nix
 
 <img src="./doc/haskell-flake.webp" width=100 />
