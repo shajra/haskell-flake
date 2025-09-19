@@ -87,8 +87,8 @@ fundamental human right.  There should be no doubt of an project maintainer's
 support.
 
 I also want to make clear that it's okay if people who disagree with such
-inclusion feel uneasy.  Feeling uneasy about such an expression is not a human
-right.
+inclusion feel uneasy.  Feeling uneasy about such an expression is not violation
+of a human right.
 
 Furthermore, even if changing words like "master" to "main" are more symbolic
 than substantive, why resist?  Just do it.  It showcases some empathy and sets
